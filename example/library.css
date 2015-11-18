@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@keyframes in {
+    from {transform: translate3d(100%,-100%,0)}
+    to {transform: translate3d(0,0,0)}
+}
+
+@keyframes out {
+  from {transform: translate3d(0,0,0)}
+  to {transform: translate3d(-100%,-100%,0); display:none}
+}
+
+body {
+  background: #b3e5fc;
+  font-family: "Roboto";
+}
+
+.lib-page {
+  width: 90%;
+  position: absolute;
+  transition: opacity .5s;
+  opacity: 0;
+  display:none;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.show {
+  transition: opacity .5s;
+  opacity: 1;
+  display: flex;
+  animation-name: in;
+  animation-duration: .4s;
+}
+
+.hide {
+  opacity: 0;
+  animation-name: out;
+  animation-duration: .4s;
+  display: flex;
+}
+
+ul.pageNavigation {
+  list-style: none;
+  position:fixed;
+  bottom:0;
+}
+
+ul.pageNavigation li {
+  display: inline;
+  padding: 10px 15px;
+  background: #ccc;
+  margin: 4px;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.lib-item {
+  width: 340px;
+  margin: 0 10px 50px;
+  background: #03a9f4;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.1);
+}
+
+.lib-title {
+  font-size: 1.3em;
+  text-align: center;
+  background: #0288d1;
+  width: 84%;
+  margin: -30px 6% 0px;
+  padding: 30px 2%;
+  display: inline-block;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.1);
+  color: #fff;
+}
+
+a.lib-button {
+  background: #EFDB32;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 44px;
+  bottom: 98px;
+  left: 250px;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.1);
+  border-radius: 50px;
+  position: absolute;
+}
+
+a.lib-button:before {
+  content: "\203A";
+  font-size: 32px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.lib-thumb {
+  width: 100%;
+}
+
+.lib-content {
+  position: relative;
+}
+
+.lib-content p {
+  padding: 25px 10px;
+  height: 40px;
+  color: #fff;
+}
